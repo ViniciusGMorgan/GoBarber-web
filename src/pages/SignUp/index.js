@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Form, Input } from "@rocketseat/unform";
 import * as Yup from "yup";
 
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/img/logo.svg";
 
 import { signUpRequest } from "../../store/modules/auth/actions";
 

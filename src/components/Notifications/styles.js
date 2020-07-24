@@ -65,6 +65,7 @@ export const Notification = styled.div`
     line-height: 18px;
   }
   time {
+    display: block;
     font-size: 12px;
     opacity: 0.6;
     margin-bottom: 5px;
@@ -74,7 +75,6 @@ export const Notification = styled.div`
     border: 0;
     background: none;
     color: ${lighten(0.2, "#7159c1")};
-    margin-left: 60px;
   }
   ${(props) =>
     props.unread &&

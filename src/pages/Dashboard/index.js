@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function Dashboard() {
   return (
-    <div>
-      <Link to="/profile">teste</Link>
+    <div style={{ marginTop: 1000 }}>
+      <h1>teste</h1>
     </div>
   );
 }
