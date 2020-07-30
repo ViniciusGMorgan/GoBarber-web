@@ -1,29 +1,40 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-import logo from "../../assets/img/logo-purple.svg";
-
 import Notifications from "../Notifications";
+
+import logo from "../../assets/img/logo-purple.svg";
 
 import { Container, Content, Profile } from "./styles";
 
 export default function Header() {
+  const profile = useSelector((state) => state.user.profile);
+  console.log(profile);
+
   return (
     <Container>
       <Content>
         <nav>
-          <img src={logo} alt="GoBarber"></img>
+          <img src={logo} alt="GoBarber" />
           <Link to="/dashboard">DASHBOARD</Link>
         </nav>
 
         <aside>
-          <Notifications></Notifications>
+          <Notifications />
+
           <Profile>
             <div>
-              <strong>Vinícius Morgan</strong>
+              <strong>{profile.name}</strong>
               <Link to="/profile">Meu perfil</Link>
-              <img src="" alt=""></img>
             </div>
+            <img
+              src={
+                (profile.avatar && profile.avatar.url) ||
+                "https://api.adorable.io/avatars/50/abott@adorable.png"
+              }
+              alt="Guilherme Rodz"
+            />
           </Profile>
         </aside>
       </Content>

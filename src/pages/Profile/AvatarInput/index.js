@@ -1,13 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useField } from "@rocketseat/unform";
 
 import api from "../../../services/api";
-import defaultImage from "../../../assets/img/abott@adorable.png";
 
 import { Container } from "./styles";
 
 export default function AvatarInput() {
   const { defaultValue, registerField } = useField("avatar");
+
   const [file, setFile] = useState(defaultValue && defaultValue.id);
   const [preview, setPreview] = useState(defaultValue && defaultValue.url);
 
@@ -39,7 +39,12 @@ export default function AvatarInput() {
   return (
     <Container>
       <label htmlFor="avatar">
-        <img src={preview || defaultImage} alt="" />
+        <img
+          src={
+            preview || "https://api.adorable.io/avatars/50/abott@adorable.png"
+          }
+          alt=""
+        />
 
         <input
           type="file"

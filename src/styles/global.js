@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import Roboto from "../assets/fonts/Roboto-Regular.ttf";
 
 import "react-perfect-scrollbar/dist/css/styles.css";
-import "react-notifications-component/dist/theme.css";
+import "react-toastify/dist/ReactToastify.css";
 
 export default createGlobalStyle`
     @font-face {

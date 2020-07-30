@@ -18,7 +18,7 @@ export const Content = styled.div`
     img {
       margin-right: 20px;
       padding-right: 20px;
-      border-right: solid 1px #eee;
+      border-right: 1px solid #eee;
     }
     a {
       font-weight: bold;
@@ -35,7 +35,7 @@ export const Profile = styled.div`
   display: flex;
   margin-left: 20px;
   padding-left: 20px;
-  border-left: solid 1px #eee;
+  border-left: 1px solid #eee;
   div {
     text-align: right;
     margin-right: 10px;
@@ -51,8 +51,9 @@ export const Profile = styled.div`
     }
   }
   img {
-    height: 32px;
+    margin-left: 10px;
     width: 32px;
+    height: 32px;
     border-radius: 50%;
   }
 `;
